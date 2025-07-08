@@ -64,7 +64,7 @@ public class CartService {
     public double evaluate(){
         double totalCost = 0;
         for(Map.Entry<Product,Integer> item : this.cart.entrySet()){
-            totalCost+=item.getValue();
+            totalCost+=item.getKey().getPrice()*item.getValue();
         }
         return totalCost;
     }

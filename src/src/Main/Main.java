@@ -11,8 +11,8 @@ public class Main {
         try {
             //expired
             //Milk milk = new Milk(10, "Milk", 20.0, 1.0, LocalDate.now().plusDays(5));
-            Laptop laptop = new Laptop(5, "Laptop", 5000.0, 2.5);
-            Book book = new Book(20, "Book", 50.0, 0.7);
+            Laptop laptop = new Laptop(5, "Laptop", 5000.0, 2500);
+            Book book = new Book(20, "Book", 50.0, 700);
             MobileScratchCard mobileScratchCard = new MobileScratchCard(1, "Scratch Card", 30.0, 0.5, LocalDate.now().plusDays(3));
 
 

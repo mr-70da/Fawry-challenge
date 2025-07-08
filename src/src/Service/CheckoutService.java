@@ -29,7 +29,7 @@ public class CheckoutService {
         System.out.println("** Checkout receipt **");
 
         for (Map.Entry<Product, Integer> item : cartService.getCart().entrySet()) {
-            System.out.printf("%dx %-13s%n", item.getValue(), item.getKey().getName());
+            System.out.printf("%dx %-13s", item.getValue(), item.getKey().getName());
             System.out.println(item.getKey().getPrice() * item.getValue());
         }
 
@@ -39,11 +39,12 @@ public class CheckoutService {
         double shippingCost = shippingService.getShippingCost();
         double total = subtotal + shippingCost;
 
-        System.out.printf("%-17s%n", "Subtotal");
-        System.out.printf("%-17s%n", "Shipping");
-        System.out.printf("%-17s%n", "Amount");
+        System.out.printf("%-17s", "Subtotal");
         System.out.println(subtotal);
+        System.out.printf("%-17s", "Shipping");
         System.out.println(shippingCost);
+        System.out.printf("%-17s", "Amount");
         System.out.println(total);
+
     }
 }

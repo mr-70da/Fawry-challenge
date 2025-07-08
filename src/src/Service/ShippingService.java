@@ -17,15 +17,16 @@ public class ShippingService {
 
         for (Map.Entry<Product, Integer> item : shippingProduct.entrySet()) {
             if (item.getKey() instanceof ShippableProduct) {
-                System.out.printf("%dx %-13s%n", item.getValue(), item.getKey().getName());
+                int quantity = item.getValue();
+                System.out.printf("%dx %-13s", quantity, item.getKey().getName());
+                int weight = (int) ((ShippableProduct) item.getKey()).getWeight();
+                System.out.printf("%dg%n", weight * quantity);
             }
         }
 
         for (Map.Entry<Product, Integer> item : shippingProduct.entrySet()) {
             if (item.getKey() instanceof ShippableProduct) {
-                int weight = (int) ((ShippableProduct) item.getKey()).getWeight();
-                int quantity = item.getValue();
-                System.out.printf("%dg%n", weight * quantity);
+
             }
         }
 
@@ -37,6 +38,7 @@ public class ShippingService {
         double totalWeightKg = totalWeightGrams / 1000.0;
 
         System.out.printf("Total package weight %.1fkg%n", totalWeightKg);
+        System.out.println();
 
     }
     public double getShippingCost(){
