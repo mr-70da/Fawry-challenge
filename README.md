@@ -1,6 +1,6 @@
-#E-commerce-system
+# E-commerce-system
 CLI java based e-commerce system that supports product management, shopping cart functionality, and checkout processing with shipping support.
-##Main features:
+## Main features:
 - Customers can add products to their cart with a specific quantity.
 - System prints a deatailed receipt for the checkout process.
 - Deals with unexpexcted errors.
